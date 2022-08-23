@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EntityTask.Application\EntityTask.Application.csproj" />
+    <ProjectReference Include="..\EntityTask.Domain\EntityTask.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

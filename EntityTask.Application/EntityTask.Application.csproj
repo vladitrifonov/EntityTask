@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EntityTask.Domain\EntityTask.Domain.csproj" />
+    <ProjectReference Include="..\EntityTask.Infrastructure\EntityTask.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>

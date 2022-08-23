@@ -1,6 +1,11 @@
+using EntityTask.Application;
+using EntityTask.Domain.Contracts;
+using EntityTask.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+RegisterDependencies(builder.Services);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -23,3 +28,9 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
+void RegisterDependencies(IServiceCollection services)
+{
+    services.AddSingleton<IEntityStorage, EntityStorage>();
+    services.AddTransient<IEntityService, EntityService>();
+}
